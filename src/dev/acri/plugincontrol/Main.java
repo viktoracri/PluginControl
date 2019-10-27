@@ -7,6 +7,7 @@ import dev.acri.plugincontrol.command.PluginControlCommand;
 import dev.acri.plugincontrol.event.InventoryClickListener;
 import dev.acri.plugincontrol.event.PlayerCommandPreprocessListener;
 import dev.acri.plugincontrol.inventory.InventoryManager;
+import dev.acri.plugincontrol.util.Metrics;
 
 public class Main extends JavaPlugin{
 	
@@ -20,6 +21,8 @@ public class Main extends JavaPlugin{
 		getCommand("pc").setExecutor(new PluginControlCommand());
 		Bukkit.getPluginManager().registerEvents(new InventoryClickListener(), this);
 		Bukkit.getPluginManager().registerEvents(new PlayerCommandPreprocessListener(), this);
+		
+		new Metrics(this);
 	}
 	
 	@Override
