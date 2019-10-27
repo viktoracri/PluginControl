@@ -1,0 +1,9 @@
+name: PluginControl
+version: 1.0
+main: dev.acri.plugincontrol.Main
+author: Viktoracri
+
+commands:
+  pc:
+    description: Access the PluginControl GUI
+    aliases: [pcontrol, plugincontrol]
